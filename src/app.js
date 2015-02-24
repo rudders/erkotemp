@@ -12,10 +12,11 @@ simply.on('accelTap', function(e) {
 
 simply.text({
   title: 'Erko Temp!',
-  body: 'This is a demo. Press buttons or tap the watch!',
+  body: 'Loading for the first time...',
 }, true);
 
 function update_temp(){
+  simply.body("Loading...");
   ajax({ url: 'https://wakai.ninja.is/rest/v0/device/1014BBBK6210_0201_0_31?user_access_token=411df89c1649abf47d865d971c56c96cb22b094f', type: 'json' }, function(data){
     simply.body(data.data.last_data.DA + "°c");});
 }
