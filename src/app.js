@@ -14,7 +14,7 @@ simply.on('accelTap', function(e) {
 
 simply.text({
   title: 'Erko Temp!',
-  subtitle: 'Loading...'
+  subtitle: 'Loading...',
   body: 'Loading...',
 }, true);
 
