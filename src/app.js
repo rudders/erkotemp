@@ -8,6 +8,7 @@ simply.on('singleClick', function(e) {
 
 simply.on('accelTap', function(e) {
   update_temp();
+  update_wemo();
 });
 
 simply.text({
@@ -27,4 +28,4 @@ function update_wemo(){
     json.forEach(function(data) { list += console.log(data.name); });
   simply.body(list);});
 }
-}
+
