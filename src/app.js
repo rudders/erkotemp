@@ -25,7 +25,7 @@ function update_temp(){
 function update_wemo(){
   simply.body("Loading...");
   ajax({ url: 'http://littlemac.binarylight.com.au:5000/api/environment?seconds=10', type: 'json' }, function(data){
-    json.forEach(function(data) { list += console.log(data.name); });
-  simply.body(list);});
+    json.forEach(function(data) { list += data.name; });
+    simply.body(list);
+    });
 }
-
