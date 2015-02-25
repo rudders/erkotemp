@@ -15,7 +15,7 @@ simply.on('accelTap', function(e) {
 simply.text({
   title: 'Erko Temp!',
   subtitle: 'Loading...',
-  body: 'Loading...',
+  body: 'Click for Wemo',
 }, true);
 
 function update_temp(){
