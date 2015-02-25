@@ -14,7 +14,8 @@ simply.on('accelTap', function(e) {
 
 simply.text({
   title: 'Erko Temp!',
-  body: 'Loading for the first time...',
+  subtitle: 'Loading...'
+  body: 'Loading...',
 }, true);
 
 function update_temp(){
@@ -26,7 +27,7 @@ function update_temp(){
 function update_wemo(){
   simply.body("Loading...");
   ajax({ url: 'http://littlemac.binarylight.com.au:5000/api/environment?seconds=10', type: 'json' }, function(data){
-    json.forEach(function(data) { list += data.name; });
+    data.forEach(function(obj) { list += obj.name; });
     simply.body(list);
     });
 }
