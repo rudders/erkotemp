@@ -3,6 +3,7 @@ update_temp();
 
 simply.on('singleClick', function(e) {
   update_temp();
+  update_wemo();
 });
 
 
